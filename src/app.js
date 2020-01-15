@@ -38,7 +38,7 @@ app.get('/weather', (req, res) => {
         geocode(req.query.address, (error, { lat, long, loc } = {}) => {
             if (error) {
                 return res.send({
-                    error: 'ERROR'
+                    error: 'Invaild Location'
                 })
             }
             forecast(lat, long, (error, { temp, summary } = {}) => {
